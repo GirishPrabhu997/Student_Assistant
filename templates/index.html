@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-main">
+                <span class="material-icons assistant-icon">school</span>
+                <h2>Student Assistant</h2>
+            </div>
+            <nav class="header-nav">
+                <a href="{{ url_for('login') }}" class="nav-button">Login</a>
+                <a href="{{ url_for('registration') }}" class="nav-button register-btn">Register</a>
+            </nav>
+        </header>
+        <div class="chat-history" id="chat-history">
+            <div class="message assistant-message">
+                <p>Hello! I'm Student Assistant. I can help you with academic info, resolving doubts, and accessing resources. How can I assist you today?</p>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="user-input" placeholder="Ask a question..." required>
+            <button id="send-button">
+                <span class="material-icons">send</span>
+            </button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Academic Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <header class="chat-header">
+            <div class="header-main">
+                <span class="material-icons assistant-icon">person_add</span>
+                <h2>Create Account</h2>
+            </div>
+            <nav class="header-nav">
+                <a href="{{ url_for('index') }}" class="nav-button register-btn">Go to Chat</a>
+            </nav>
+        </header>
+
+        <form class="form-body" action="#" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="student@university.edu" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Register</button>
+            
+            <p class="link-text">
+                Already have an account? <a href="{{ url_for('login') }}">Login Here</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
